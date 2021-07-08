@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+body {
+    background-color: white;
+}
+h1 {
+    text-align: center;
+    color: darkblue;
+    text-transform: capitalize;
+}
+p {
+    text-align: center;
+    text-transform: capitalize;
+}
+figure.notas {
+    position: relative;
+}
+figure.figcaption {
+    position: absolute;
+}
