@@ -18,3 +18,7 @@ figure.notas {
 figure.figcaption {
     position: absolute;
 }
+div {
+    font: normal 15pt arial;
+    color: black;
+}

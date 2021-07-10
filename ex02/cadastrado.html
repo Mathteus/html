@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Orgs 7 Rios</title>
+    <style>
+        h1 {
+            color: black;
+            font:normal
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro Para Doação</h1>
+    <p>
+        Nome: 
+        <input type="text" name="area-name">
+    </p>
+    <p>
+        Email:
+        <input type="email" name="email">
+    </p>
+    <p>
+        <input type="button" value="Confirma" name="button-confirma">
+    </p>
+    <script>
+        var name = window.document.getElementsByName('area-name')
+        var email = window.document.getElementsByName('email')
+        var botao = window.document.getElementsByName('button-confirma')
+        botao.addEveentListener('click',clicar)
+        function clicar(){
+            window.alert(`${name} Sera Enviado Um Email Para Confirma No Endereço ${email}...`)
+            window.open('agradecimento.html')
+        }
+    </script>
+</body>
+</html>
