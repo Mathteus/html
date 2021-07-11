@@ -11,29 +11,32 @@
             color: black;
             font:normal
         }
+        div {
+            font: normal 12pt arial;
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <h1>Cadastro Para Doação</h1>
-    <p>
-        Nome: 
-        <input type="text" name="area-name">
-    </p>
-    <p>
-        Email:
-        <input type="email" name="email">
-    </p>
-    <p>
-        <input type="button" value="Confirma" name="button-confirma">
-    </p>
+    Nome: 
+    <input type="text" name="name" id="name">
+    <br/>
+    Email:
+    <input type="email" name="destinatario" id="destinatario">
+    <button onclick="clicar()">Confirmar</button>
     <script>
-        var name = window.document.getElementsByName('area-name')
-        var email = window.document.getElementsByName('email')
-        var botao = window.document.getElementsByName('button-confirma')
-        botao.addEveentListener('click',clicar)
+        var nome = document.querySelector('input#name')
+        var email = document.querySelector('input#destinatario')
         function clicar(){
-            window.alert(`${name} Sera Enviado Um Email Para Confirma No Endereço ${email}...`)
-            window.open('agradecimento.html')
+            window.alert(`${nome.value} um email para confirmação foi enviado para ${email.value}...`)
+            window.open("agradecimento.html")
+            window.close()
         }
     </script>
 </body>
