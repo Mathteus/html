@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Temperatura</title>
+    <style>
+        body {
+            background-color: darkgrey;
+            color: black;
+            font-family: normal 20px arial;
+        }
+
+        h1 {
+            text-align: center;
+            text-transform: capitalize;
+        }
+        div {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Coversor de Medidas</h1>
+    <h2>Converter Temperatura</h2>
+    <p>
+        °C
+        <input type="number" name="temperatura" id="temperatura"/>
+        <input type="button" value="Converter" name="bottun" id="bottun" onclick="clicar()"/>
+    </p>
+    <div id="kelvin">°K : </div>
+    <div id="fahrenheit">°F :</div>
+    <script>
+        function clicar(){
+            var temp = document.getElementById('temperatura')
+            var cel = Number(temp.value)
+            var pkel = window.document.getElementById('kelvin')
+            var pfahr= window.document.getElementById('fahrenheit')
+            var kel = 0
+            var fahr = 0
+
+            kel = cel+273.15
+            fahr = cel*1.8+32
+            pfahr.innerHTML=`Temperatura em °F: ${fahr.toFixed(2)}`
+            pkel.innerHTML=`Temperatura em °K: ${kel.toFixed(2)}`
+        }
+    </script>
+</body>
+</html>
